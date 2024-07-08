@@ -998,7 +998,7 @@ const getFragmentConfigs = async (env, hostName, client) => {
     let proxySettings = {};
     let proxyOutbound;
     let proxyIndex = 1;
-    const bestFragValues = ['10-20', '20-30', '30-40', '40-50', '50-60', '60-70', 
+    const bestFragValues = ['1-3', '5-7', '10-20', '20-30', '30-40', '40-50', '50-60', '60-70', 
                             '70-80', '80-90', '90-100', '10-30', '20-40', '30-50', 
                             '40-60', '50-70', '60-80', '70-90', '80-100', '100-200']
 
@@ -1140,7 +1140,7 @@ const getFragmentConfigs = async (env, hostName, client) => {
             protocol: "freedom",
             settings: {
                 fragment: {
-                    packets: "tlshello",
+                    packets: "1-1",
                     length: fragLength,
                     interval: "1-1"
                 }
@@ -1587,10 +1587,10 @@ const updateDataset = async (env, Settings) => {
     const proxySettings = {
         remoteDNS: Settings?.get('remoteDNS') || currentProxySettings?.remoteDNS || 'https://94.140.14.14/dns-query',
         localDNS: Settings?.get('localDNS') || currentProxySettings?.localDNS || '8.8.8.8',
-        lengthMin: Settings?.get('fragmentLengthMin') || currentProxySettings?.lengthMin || '100',
-        lengthMax: Settings?.get('fragmentLengthMax') || currentProxySettings?.lengthMax || '200',
+        lengthMin: Settings?.get('fragmentLengthMin') || currentProxySettings?.lengthMin || '5',
+        lengthMax: Settings?.get('fragmentLengthMax') || currentProxySettings?.lengthMax || '7',
         intervalMin: Settings?.get('fragmentIntervalMin') || currentProxySettings?.intervalMin || '5',
-        intervalMax: Settings?.get('fragmentIntervalMax') || currentProxySettings?.intervalMax || '10',
+        intervalMax: Settings?.get('fragmentIntervalMax') || currentProxySettings?.intervalMax || '7',
         blockAds: Settings?.get('block-ads') || currentProxySettings?.blockAds || false,
         bypassIran: Settings?.get('bypass-iran') || currentProxySettings?.bypassIran || false,
         blockPorn: Settings?.get('block-porn') || currentProxySettings?.blockPorn || false,
@@ -2029,7 +2029,7 @@ const renderHomePage = async (env, hostName, fragConfigs) => {
 				<div class="form-control">
 					<label for="fragmentLengthMin">📐 Length</label>
 					<div style="display: grid; grid-template-columns: 1fr auto 1fr; align-items: baseline;">
-						<input type="number" id="fragmentLengthMin" name="fragmentLengthMin" value="${lengthMin}" min="10" required>
+						<input type="number" id="fragmentLengthMin" name="fragmentLengthMin" value="${lengthMin}" min="1" required>
 						<span style="text-align: center; white-space: pre;"> - </span>
 						<input type="number" id="fragmentLengthMax" name="fragmentLengthMax" value="${lengthMax}" max="500" required>
 					</div>
@@ -2831,7 +2831,7 @@ const xrayConfigTemp = {
             protocol: "freedom",
             settings: {
                 fragment: {
-                    packets: "tlshello",
+                    packets: "1-1",
                     length: "",
                     interval: "",
                 },
