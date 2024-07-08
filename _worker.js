@@ -7,7 +7,7 @@ import { connect } from 'cloudflare:sockets';
 
 // How to generate your own UUID:
 // https://www.uuidgenerator.net/
-let userID = '89b3cbba-e6ac-485a-9481-976a0415eab9';
+let userID = '36159d40-fd67-4f4c-8eed-810a8f7db549';
 
 // https://www.nslookup.io/domains/cdn.xn--b6gac.eu.org/dns-records/
 // https://www.nslookup.io/domains/cdn-all.xn--b6gac.eu.org/dns-records/
@@ -1587,10 +1587,10 @@ const updateDataset = async (env, Settings) => {
     const proxySettings = {
         remoteDNS: Settings?.get('remoteDNS') || currentProxySettings?.remoteDNS || 'https://94.140.14.14/dns-query',
         localDNS: Settings?.get('localDNS') || currentProxySettings?.localDNS || '8.8.8.8',
-        lengthMin: Settings?.get('fragmentLengthMin') || currentProxySettings?.lengthMin || '20',
-        lengthMax: Settings?.get('fragmentLengthMax') || currentProxySettings?.lengthMax || '30',
+        lengthMin: Settings?.get('fragmentLengthMin') || currentProxySettings?.lengthMin || '100',
+        lengthMax: Settings?.get('fragmentLengthMax') || currentProxySettings?.lengthMax || '200',
         intervalMin: Settings?.get('fragmentIntervalMin') || currentProxySettings?.intervalMin || '5',
-        intervalMax: Settings?.get('fragmentIntervalMax') || currentProxySettings?.intervalMax || '7',
+        intervalMax: Settings?.get('fragmentIntervalMax') || currentProxySettings?.intervalMax || '10',
         blockAds: Settings?.get('block-ads') || currentProxySettings?.blockAds || false,
         bypassIran: Settings?.get('bypass-iran') || currentProxySettings?.bypassIran || false,
         blockPorn: Settings?.get('block-porn') || currentProxySettings?.blockPorn || false,
