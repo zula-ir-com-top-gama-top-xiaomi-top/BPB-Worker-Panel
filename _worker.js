@@ -1587,8 +1587,8 @@ const updateDataset = async (env, Settings) => {
     const proxySettings = {
         remoteDNS: Settings?.get('remoteDNS') || currentProxySettings?.remoteDNS || 'https://94.140.14.14/dns-query',
         localDNS: Settings?.get('localDNS') || currentProxySettings?.localDNS || '8.8.8.8',
-        lengthMin: Settings?.get('fragmentLengthMin') || currentProxySettings?.lengthMin || '5',
-        lengthMax: Settings?.get('fragmentLengthMax') || currentProxySettings?.lengthMax || '7',
+        lengthMin: Settings?.get('fragmentLengthMin') || currentProxySettings?.lengthMin || '20',
+        lengthMax: Settings?.get('fragmentLengthMax') || currentProxySettings?.lengthMax || '30',
         intervalMin: Settings?.get('fragmentIntervalMin') || currentProxySettings?.intervalMin || '5',
         intervalMax: Settings?.get('fragmentIntervalMax') || currentProxySettings?.intervalMax || '7',
         blockAds: Settings?.get('block-ads') || currentProxySettings?.blockAds || false,
