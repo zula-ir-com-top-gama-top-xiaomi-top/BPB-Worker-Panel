@@ -998,7 +998,7 @@ const getFragmentConfigs = async (env, hostName, client) => {
     let proxySettings = {};
     let proxyOutbound;
     let proxyIndex = 1;
-    const bestFragValues = ['1-3', '5-7', '10-20', '20-30', '30-40', '40-50', '50-60', '60-70', 
+    const bestFragValues = ['10-20', '20-30', '30-40', '40-50', '50-60', '60-70', 
                             '70-80', '80-90', '90-100', '10-30', '20-40', '30-50', 
                             '40-60', '50-70', '60-80', '70-90', '80-100', '100-200']
 
