@@ -1140,7 +1140,7 @@ const getFragmentConfigs = async (env, hostName, client) => {
             protocol: "freedom",
             settings: {
                 fragment: {
-                    packets: "tlshello",
+                    packets: "1-1",
                     length: fragLength,
                     interval: "1-1"
                 }
@@ -2831,7 +2831,7 @@ const xrayConfigTemp = {
             protocol: "freedom",
             settings: {
                 fragment: {
-                    packets: "tlshello",
+                    packets: "1-1",
                     length: "",
                     interval: "",
                 },
